@@ -1,2 +1,3 @@
-- src: https://github.com/galaxyproject/ansible-galaxy.git
+- src: https://github.com/AcaDemIQ/ansible-galaxy.git
+  version: main
   name: galaxy
