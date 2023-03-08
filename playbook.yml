@@ -29,6 +29,8 @@
         gunicorn:
           bind: 0.0.0.0:8080
       uwsgi: {}
+      galaxy:
+        database_connection: postgresql://galaxydbuser:42@gpsql/galaxy
   tasks:
   - name: Run the galaxy role
     include_role:
