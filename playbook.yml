@@ -27,7 +27,6 @@
     galaxy_virtualenv_python: python3
     pip_extra_args: "--no-cache-dir --compile"
     galaxy_manage_database: true
-    galaxy_database_connection: "postgresql://galaxydbuser:42@gpsql/galaxy"
     galaxy_manage_clone: false
     galaxy_manage_existing: true
     galaxy_client_make_target: client-production
@@ -44,6 +43,8 @@
         gunicorn:
           bind: 0.0.0.0:8080
       uwsgi: {}
+      galaxy:
+        database_connection: "postgresql://galaxydbuser:42@gpsql/galaxy"
   tasks:
   - name: Run the galaxy role
     include_role:
