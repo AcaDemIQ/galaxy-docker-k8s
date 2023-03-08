@@ -26,7 +26,8 @@
     galaxy_virtualenv_command: /usr/bin/python3 -m virtualenv
     galaxy_virtualenv_python: python3
     pip_extra_args: "--no-cache-dir --compile"
-    galaxy_manage_database: false
+    galaxy_manage_database: true
+    database_connection: "postgresql://galaxydbuser:42@gpsql/galaxy"
     galaxy_manage_clone: false
     galaxy_manage_existing: true
     galaxy_client_make_target: client-production
